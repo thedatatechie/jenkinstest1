@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-        stage (‘Deploy’) {
+        stage ('deploy') {
             archiveArtifacts artifacts: '**', fingerprint: true
 
             //bat ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’

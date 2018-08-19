@@ -1,4 +1,3 @@
-#!/usr/bin/env groovy
 
 agent any
     stages {

@@ -32,9 +32,12 @@ pipeline {
         stage ('deploy') {
             steps{
                     archiveArtifacts artifacts: '**', fingerprint: true
-                    bat "cd"
-                    bat "dir"
-                    bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""
+                    bat "SET locdir=%cd%"
+                    bat "SET fpath=%locdir%/target/*jar-with-dependencies.jar"
+                    bat "ECHO extractedlocation"
+                    bat "ECHO %fpath%"
+                    bat "copy /y %fpath% \"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""
+                    //bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""
                     //bat 'cp target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:/jar_files/'
 
                     //bat ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’

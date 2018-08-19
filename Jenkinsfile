@@ -2,8 +2,6 @@
 pipeline {
   agent any
 
-  repositoryCommiterEmail = 'vijaymec@gmail.com'
-  repositoryCommiterUsername = 'thedatatechie'
 
   stages {
     stage('build') {
@@ -14,8 +12,8 @@ pipeline {
 
     stage('publish'){
         steps{
-    		sh("git config user.email ${repositoryCommiterEmail}")
-            sh("git config user.name '${repositoryCommiterUsername}'")
+    		sh("git config user.email vijaymec@gmail.com")
+            sh("git config user.name 'thedatatechie'")
 
             sh "git remote set-url origin git@github.com:..."
 

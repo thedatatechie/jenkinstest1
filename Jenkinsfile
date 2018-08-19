@@ -33,7 +33,7 @@ pipeline {
             steps{
                     archiveArtifacts artifacts: '**', fingerprint: true
                     bat "SET locdir=%cd%"
-                    bat "SET fpath=%locdir%/target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar"
+                    bat "SET fpath=%cd%/target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar"
                     bat "ECHO extractedlocation"
                     bat "ECHO %fpath%"
                     bat "copy /y %fpath% \"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""

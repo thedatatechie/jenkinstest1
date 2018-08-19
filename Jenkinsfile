@@ -32,6 +32,7 @@ pipeline {
         stage ('deploy') {
             steps{
                     archiveArtifacts artifacts: '**', fingerprint: true
+                    bat 'cp target/*jar-with-dependencies.jar C:\jar_files\'
 
                     //bat ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’
                     //bat ‘ssh user@server mkdir -p /var/www/temp_deploy’

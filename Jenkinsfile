@@ -18,8 +18,7 @@ pipeline {
 
             // tags current changeset
             bat "git tag -a snapshot -m \"passed CI\""
-            // deletes tag on remote in order not to fail pushing the new one
-            bat "git push origin :refs/tags/snapshot"
+
             // pushes the tags
             bat "git push --tags"
 

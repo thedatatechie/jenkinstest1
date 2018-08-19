@@ -38,7 +38,8 @@ pipeline {
                     bat "ECHO \"%fpath%\""
                     bat "dir \"%cd%/target\""
                     bat "copy \"%cd%/target/*jar-with-dependencies.jar\" \"C:/jar_files/\""
-                    //bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""
+                    //bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" 
+                    //"\"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""
                     //bat 'cp target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:/jar_files/'
 
                     //bat ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’

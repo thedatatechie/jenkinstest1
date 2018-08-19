@@ -3,7 +3,7 @@ pipeline {
     //agent any
     agent {
         node {
-          label 'my-defined-label'
+          //label 'my-defined-label'
           customWorkspace 'C:/Jnkns_vj_temp_wd/'
         }
       }

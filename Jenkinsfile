@@ -38,7 +38,7 @@ pipeline {
                     bat "ECHO extractedlocation"
                     bat "ECHO \"%fpath%\""
                     bat "dir \"%cd%/target\""
-                    bat "copy \"%cd%/target/*jar-with-dependencies.jar\" \"C:/jar_files/\""
+                    //bat "copy \"%cd%/target/*jar-with-dependencies.jar\" \"C:/jar_files/\""
                     //bat "copy \"C:/Jnkns_vj_temp_wd/target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/\""
                     //bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" 
                     //"\"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""

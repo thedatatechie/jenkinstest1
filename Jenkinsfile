@@ -2,8 +2,7 @@
 pipeline {
     agent any
     // clearing the failed branches
-    options { buildDiscarder(logRotator(numToKeepStr: '1')) }
-
+    options {buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '4', artifactNumToKeepStr: '3'))}
 
     stages {
 
@@ -20,14 +19,13 @@ pipeline {
                 bat "git remote set-url origin https://github.com/thedatatechie/jenkinstest1.git"
 
                 // deletes current snapshot tag
-                bat "git tag -d snapshot2"
-                bat "git push --delete origin snapshot2"
+                bat "git tag -d snapshot"
+                bat "git push --delete origin snapshot"
                 // tags current changeset
                 bat "git tag -a snapshot -m \"passed CI\""
 
                 // pushes the tags
                 bat "git push --tags"
-
             }
         }
     }

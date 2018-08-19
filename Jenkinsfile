@@ -1,12 +1,9 @@
 
 pipeline {
-    //agent any
-    agent {
-        node {
-          //label 'my-defined-label'
-          customWorkspace 'C:/Jnkns_vj_temp_wd/'
-        }
-      }
+    agent any
+
+
+    customWorkspace 'C:/Jnkns_vj_temp_wd/'
 
 
     // clearing the failed branches

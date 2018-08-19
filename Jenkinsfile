@@ -32,8 +32,8 @@ pipeline {
         stage ('deploy') {
             steps{
                     archiveArtifacts artifacts: '**', fingerprint: true
-                    //bat 'copy target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:/jar_files/'
-                    bat 'cp target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:/jar_files/'
+                    bat "copy target\jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:\jar_files\jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar"
+                    //bat 'cp target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:/jar_files/'
 
                     //bat ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’
                     //bat ‘ssh user@server mkdir -p /var/www/temp_deploy’

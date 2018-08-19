@@ -1,6 +1,14 @@
 
 pipeline {
-    agent any
+    //agent any
+    agent {
+        node {
+          label 'my-defined-label'
+          customWorkspace \"C:/Jnkns_vj_temp_wd/\"'
+        }
+      }
+
+
     // clearing the failed branches
     options {buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '4'))}
 
@@ -37,7 +45,7 @@ pipeline {
                     bat "ECHO extractedlocation"
                     bat "ECHO \"%fpath%\""
                     bat "dir \"%cd%/target\""
-                    bat "copy \"C:/Program Files (x86)/Jenkins/workspace/npmbghbuild_master-HJ553JMD24AAOC4RJJMLBFPW2AYKXS27RIXVYKPGEHMEJN55TYGA/target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/\""
+                    bat "copy \"C:/Jnkns_vj_temp_wd/target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/\""
                     //bat "copy \"%cd%/target/*jar-with-dependencies.jar\" \"C:/jar_files/\""
                     //bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" 
                     //"\"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""

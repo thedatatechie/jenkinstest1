@@ -19,7 +19,7 @@ pipeline {
                 bat "git remote set-url origin https://github.com/thedatatechie/jenkinstest1.git"
 
                 // deletes current snapshot tag
-                //bat "git tag -d snapshot"
+                bat "git tag -d snapshot"
                 bat "git push --delete origin snapshot"
                 // tags current changeset
                 bat "git tag -a snapshot -m \"passed CI\""
@@ -37,7 +37,8 @@ pipeline {
                     bat "ECHO extractedlocation"
                     bat "ECHO \"%fpath%\""
                     bat "dir \"%cd%/target\""
-                    bat "copy \"%cd%/target/*jar-with-dependencies.jar\" \"C:/jar_files/\""
+                    bat "copy \"C:\Program Files (x86)\Jenkins\workspace\npmbghbuild_master-HJ553JMD24AAOC4RJJMLBFPW2AYKXS27RIXVYKPGEHMEJN55TYGA/target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" \"C:/jar_files/\""
+                    //bat "copy \"%cd%/target/*jar-with-dependencies.jar\" \"C:/jar_files/\""
                     //bat "copy /y \"target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\" 
                     //"\"C:/jar_files/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar\""
                     //bat 'cp target/jenkinstest2-1.0-SNAPSHOT-jar-with-dependencies.jar C:/jar_files/'

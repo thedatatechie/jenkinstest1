@@ -6,12 +6,6 @@ pipeline {
 
     stages {
 
-        stage('clearbuilds'){
-            steps{
-
-            }
-        }
-
         stage('build') {
           steps {
             bat 'mvn clean install'

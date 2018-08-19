@@ -1,8 +1,9 @@
 
-agent any
+node{
     stages {
         step {
             sh 'mvn -B -DskipTests clean package'
         }
+    }
 
 }

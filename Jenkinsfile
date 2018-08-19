@@ -2,7 +2,7 @@
 pipeline {
     agent any
     // clearing the failed branches
-    options {buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '4', artifactNumToKeepStr: '3'))}
+    options {buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '4'))}
 
     stages {
 

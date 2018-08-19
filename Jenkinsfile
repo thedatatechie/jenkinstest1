@@ -20,7 +20,7 @@ pipeline {
                 bat "git remote set-url origin https://github.com/thedatatechie/jenkinstest1.git"
 
                 // deletes current snapshot tag
-                bat "git tag -d snapshot"
+                bat "git tag -d snapshot2"
                 bat "git push --delete origin snapshot2"
                 // tags current changeset
                 bat "git tag -a snapshot -m \"passed CI\""

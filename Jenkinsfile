@@ -18,8 +18,9 @@ pipeline {
 
             // deletes current snapshot tag
             bat "git tag -d snapshot"
+            bat "git push --delete origin snapshot"
             // tags current changeset
-            bat "git tag -a snapshot -m \"passed CI\""
+            bat "git tag -a snapshot2 -m \"passed CI\""
 
             // pushes the tags
             bat "git push --tags"

@@ -14,11 +14,11 @@ class MathFuncTest extends FunSuite with Matchers{
     result should be (expected)
   }
 
-//  test("testMult") {
-//    val ob1 = new MathFunc()
-//    val result = ob1.mult(3,5)
-//    val expected = 15
-//    result should be (expected)
-//  }
+  test("testMult") {
+    val ob1 = new MathFunc()
+    val result = ob1.mult(3,5)
+    val expected = 16
+    result should be (expected)
+  }
 
 }

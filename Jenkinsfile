@@ -1,9 +1,11 @@
 
-node{
+pipeline {
+  agent any
+  stages {
     stage('build') {
-        step {
-            sh 'mvn -B -DskipTests clean package'
-        }
+      steps {
+        sh 'echo Building ${BRANCH_NAME}...'
+      }
     }
-
+  }
 }

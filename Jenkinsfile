@@ -1,6 +1,6 @@
 
 node{
-    stage {
+    stage('build') {
         step {
             sh 'mvn -B -DskipTests clean package'
         }

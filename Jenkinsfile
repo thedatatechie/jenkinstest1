@@ -16,6 +16,8 @@ pipeline {
             bat("git config user.name 'thedatatechie'")
             bat "git remote set-url origin git@github.com:..."
 
+            // deletes current snapshot tag
+            bat "git tag -d snapshot"
             // tags current changeset
             bat "git tag -a snapshot -m \"passed CI\""
 
